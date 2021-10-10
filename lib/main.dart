@@ -1,4 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:school_mobile_app/islam/Home.dart';
 
+import 'islam/Login.dart';
 /*import 'package:marry_me/Components/Profile_Components/Edit.dart';
 import 'package:marry_me/Utility/Themes.dart';
 import 'package:marry_me/Views/ForgotPassword.dart';
@@ -34,21 +37,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<MyModel>(
-        create: (context) => MyModel(),
-        child: MaterialApp(
+    return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Marry Me',
-          theme: lightTheme,
-          initialRoute: Login.routeName,
+          title: 'School',
+          //theme: lightTheme,
+          initialRoute: Login.routName,
           routes: {
+            Login.routName: (context) => Login(),
+            Home.routName:(context) => Home(),
+            /*
             Splash.routeName: (context) => Splash(),
             requests.routeName: (context) => requests(),
             requestsrecieved.routeName: (context) => requestsrecieved(),
             Home.routeName: (context) => Home(),
             RecentChats.routeName: (context) => RecentChats(),
             Chat.routeName: (context) => Chat(chatRoomData: ChatRoomData(userImage: '',userId: 0,receiverName: '',receiverImage: '',receiverId: 0,chatId: 0, block: true),),
-            Login.routeName: (context) => Login(),
             ForgotPassword.routeName: (context) => ForgotPassword(),
             Signup.routeName: (context) => Signup(),
             VerifyEmail.routeName: (context) => VerifyEmail(),
@@ -58,9 +61,8 @@ class MyApp extends StatelessWidget {
             Quiz.routeName: (context)=>Quiz(),
             Likedme.routeName: (context)=>Likedme(),
             Blocks.routeName: (context)=>Blocks(),
-            Fav.routeName: (context)=>Fav(),
+            Fav.routeName: (context)=>Fav(),*/
           },
-        )
-    );
+        );
   }
 }
